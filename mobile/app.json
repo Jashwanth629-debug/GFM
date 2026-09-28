@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "GlitzUp PestCheck",
+    "slug": "glitzup-pestcheck",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#012341",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "in.glitzupfm.pestcheck"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#012341"
+      },
+      "package": "in.glitzupfm.pestcheck",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow GlitzUp PestCheck to tag GPS coordinates to verify compliance at client sites."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow GlitzUp PestCheck to capture site evidence photos for pest detection audits."
+        }
+      ]
+    ]
+  }
+}

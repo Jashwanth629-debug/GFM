@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-900;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* iPhone style vibrant mesh gradient background */
+    background-color: #f0f4f8;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(1, 35, 65, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(241, 196, 15, 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(1, 35, 65, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.8) 0px, transparent 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbar matching glass theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.8);
+}
+
+/* 
+  Glassmorphism Utilities 
+  Emulating iOS translucent effects
+*/
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-2xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/50 backdrop-blur-lg border border-white/50 shadow-[0_4px_16px_0_rgba(31,38,135,0.05)] rounded-xl;
+  }
+
+  .glass-button {
+    @apply bg-white/60 backdrop-blur-md border border-white/80 shadow-sm hover:bg-white/80 transition-all rounded-lg;
+  }
+
+  .glass-input {
+    @apply bg-white/30 backdrop-blur-sm border border-white/50 focus:bg-white/50 focus:border-white/80 outline-none transition-all rounded-lg;
+  }
+
+  .dark-glass {
+    @apply bg-glitzup-navy/80 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-2xl text-white;
+  }
+}
